@@ -19,13 +19,6 @@ st.success('Gratulacje! Z powodzeniem uruchomiłeś aplikację')
 # streamlit jest wykorzystywany do tworzenia aplikacji
 # z tego powodu dobrą praktyką jest informowanie użytkownika o postępie, błędach, etc.
 
-# Inne przykłady do wypróbowania:
-# st.balloons() # animowane balony ;)
-# st.error('Błąd!') # wyświetla informację o błędzie
-# st.warning('Ostrzeżenie, działa, ale chyba tak sobie...')
-# st.info('Informacja...')
-# st.success('Udało się!')
-
 st.title('Streamlit + 🤗 Transformers')
 
 st.header('Wprowadzenie')
@@ -70,7 +63,7 @@ st.write('✅ ~~Dodaj właściwy tytuł do swojej aplikacji, może jakieś grafi
 st.write('✅ ~~Dodaj krótką instrukcję i napisz do czego służy aplikacja~~')
 st.write('✅ ~~Wpłyń na user experience, dodaj informacje o ładowaniu, sukcesie, błędzie, itd.~~')
 st.write('✅ ~~Na końcu umieść swój numer indeksu~~')
-st.write('🐞 Stwórz nowe repozytorium na GitHub, dodaj do niego swoją aplikację, plik z wymaganiami (requirements.txt)')
+st.write('✅ ~~Stwórz nowe repozytorium na GitHub, dodaj do niego swoją aplikację, plik z wymaganiami (requirements.txt)~~')
 st.write('🐞 Udostępnij stworzoną przez siebie aplikację (https://share.streamlit.io) a link prześlij do prowadzącego')
 
 st.caption("@ Bartłomiej Kawa, s18581")
