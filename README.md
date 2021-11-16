@@ -14,3 +14,5 @@ More about 🤗 Transformers:
 - https://huggingface.co/transformers/index.html
 - https://huggingface.co/transformers/usage.html
 - https://github.com/huggingface/transformers
+
+![](app_preview.png)

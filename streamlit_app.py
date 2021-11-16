@@ -64,6 +64,6 @@ st.write('✅ ~~Dodaj krótką instrukcję i napisz do czego służy aplikacja~~
 st.write('✅ ~~Wpłyń na user experience, dodaj informacje o ładowaniu, sukcesie, błędzie, itd.~~')
 st.write('✅ ~~Na końcu umieść swój numer indeksu~~')
 st.write('✅ ~~Stwórz nowe repozytorium na GitHub, dodaj do niego swoją aplikację, plik z wymaganiami (requirements.txt)~~')
-st.write('🐞 Udostępnij stworzoną przez siebie aplikację (https://share.streamlit.io) a link prześlij do prowadzącego')
+st.write('✅ ~~Udostępnij stworzoną przez siebie aplikację (https://share.streamlit.io) a link prześlij do prowadzącego~~')
 
 st.caption("@ Bartłomiej Kawa, s18581")
