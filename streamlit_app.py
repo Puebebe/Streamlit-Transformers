@@ -52,21 +52,23 @@ option = st.selectbox(
 if option == options[0]:
     text = st.text_area(label="Wpisz tekst")
     if text:
-        classifier = pipeline("sentiment-analysis")
-        answer = classifier(text)
-        st.write(answer)
+        with st.spinner(text='Analizuję...'):
+            classifier = pipeline("sentiment-analysis")
+            answer = classifier(text)
+            st.success('Analiza tekstu "' + text + '":\n\n' + 'etykieta -> ' + answer[0]['label'] + '\n\nwynik -> ' + str(answer[0]['score']))
 elif option == options[1]:
     text = st.text_area(label="Wpisz tekst")
     if text:
-        translator = pipeline("translation_en_to_de")
-        answer = translator(text)
-        st.write(answer)
+        with st.spinner(text='Tłumaczę...'):
+            translator = pipeline("translation_en_to_de")
+            answer = translator(text)
+            st.success('Tłumaczenie:\n\n' + text + ' -> ' + answer[0]['translation_text'])
 
 st.subheader('Zadanie do wykonania')
 st.write('Wykorzystaj Huggin Face do stworzenia swojej własnej aplikacji tłumaczącej tekst z języka angielskiego na język niemiecki. Zmodyfikuj powyższy kod dodając do niego kolejną opcję, tj. tłumaczenie tekstu. Informacje potrzebne do zmodyfikowania kodu znajdziesz na stronie Huggin Face - https://huggingface.co/transformers/usage.html')
 st.write('✅ ~~Dodaj właściwy tytuł do swojej aplikacji, może jakieś grafiki?~~')
 st.write('✅ ~~Dodaj krótką instrukcję i napisz do czego służy aplikacja~~')
-st.write('🐞 Wpłyń na user experience, dodaj informacje o ładowaniu, sukcesie, błędzie, itd.')
+st.write('✅ ~~Wpłyń na user experience, dodaj informacje o ładowaniu, sukcesie, błędzie, itd.~~')
 st.write('✅ ~~Na końcu umieść swój numer indeksu~~')
 st.write('🐞 Stwórz nowe repozytorium na GitHub, dodaj do niego swoją aplikację, plik z wymaganiami (requirements.txt)')
 st.write('🐞 Udostępnij stworzoną przez siebie aplikację (https://share.streamlit.io) a link prześlij do prowadzącego')
