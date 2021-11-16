@@ -39,19 +39,27 @@ st.header('Przetwarzanie języka naturalnego :scroll: :speech_balloon:')
 import streamlit as st
 from transformers import pipeline
 
+options = ["Wydźwięk emocjonalny tekstu (eng)", "Tłumaczenie tekstu z języka angielskiego na język niemiecki"]
+
 option = st.selectbox(
     "Opcje",
     [
-        "Wydźwięk emocjonalny tekstu (eng)",
-        "Tłumaczenie tekstu z języka angielskiego na język niemiecki",
+        options[0],
+        options[1],
     ],
 )
 
-if option == "Wydźwięk emocjonalny tekstu (eng)":
+if option == options[0]:
     text = st.text_area(label="Wpisz tekst")
     if text:
         classifier = pipeline("sentiment-analysis")
         answer = classifier(text)
+        st.write(answer)
+elif option == options[1]:
+    text = st.text_area(label="Wpisz tekst")
+    if text:
+        translator = pipeline("translation_en_to_de")
+        answer = translator(text)
         st.write(answer)
 
 st.subheader('Zadanie do wykonania')
